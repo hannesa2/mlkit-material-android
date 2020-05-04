@@ -13,19 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package com.google.firebase.ml.md
 
-package com.google.firebase.ml.md.java.productsearch;
+import android.content.Intent
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.ml.md.kotlin.MainActivity
 
-/** Information about a product. */
-public class Product {
-
-  final String imageUrl;
-  final String title;
-  final String subtitle;
-
-  Product(String imageUrl, String title, String subtitle) {
-    this.imageUrl = imageUrl;
-    this.title = title;
-    this.subtitle = subtitle;
-  }
+class EntryChoiceActivity : AppCompatActivity() {
+    override fun onCreate(bundle: Bundle?) {
+        super.onCreate(bundle)
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
+    }
 }
